@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="clienteServicios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="usuarioTCS" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clienteServiciosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DatosUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosUsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="camposFormatoServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFormato" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="camposFormatoServicioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="grabarSolicitudIngresoJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFormato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalleJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="grabarSolicitudIngresoJSONResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="grabarSolicitudIngresoDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFormato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="grabarSolicitudIngresoDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="grabarSolicitudIngresoDataSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="servicioFormatos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idServicio" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoSolicitud" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="servicioFormatosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SaveDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="docbinaryarray" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveDocumentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar">
+        <s:complexType />
+      </s:element>
+      <s:element name="GuardarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="campos_Formato_Servicio_DataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFormato" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="campos_Formato_Servicio_DataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="campos_Formato_Servicio_DataTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="guardarSolicitudIngresoTMP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFormato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalleJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="guardarSolicitudIngresoTMPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DatosTemporales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFormato" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosTemporalesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="tipoEnvioClienteServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idServicio" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tipoEnvioClienteServicioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="tiempoRespuestaClienteServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idServicio" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tiempoRespuestaClienteServicioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="formadeEnvio">
+        <s:complexType />
+      </s:element>
+      <s:element name="formadeEnvioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="tipodeSalida">
+        <s:complexType />
+      </s:element>
+      <s:element name="tipodeSalidaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="consultarRegistroPorTipoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFormato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalleJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarRegistroPorTipoDocumentoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="grabarSolicitudRecuperacionJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFormato" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombreUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="observaciones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoSolicitud" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoEnvio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="formaEnvio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoSalida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tiempoServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalleJson" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="grabarSolicitudRecuperacionJSONResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServicioCamposClave">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idServicio" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicioCamposClaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServicioCamposClaveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudesporClienteServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idServicio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudesporClienteServicioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="clienteServiciosSoapIn">
+    <wsdl:part name="parameters" element="tns:clienteServicios" />
+  </wsdl:message>
+  <wsdl:message name="clienteServiciosSoapOut">
+    <wsdl:part name="parameters" element="tns:clienteServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DatosUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:DatosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="DatosUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:DatosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="camposFormatoServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:camposFormatoServicio" />
+  </wsdl:message>
+  <wsdl:message name="camposFormatoServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:camposFormatoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudIngresoJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:grabarSolicitudIngresoJSON" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudIngresoJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:grabarSolicitudIngresoJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudIngresoDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:grabarSolicitudIngresoDataSet" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudIngresoDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:grabarSolicitudIngresoDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="servicioFormatosSoapIn">
+    <wsdl:part name="parameters" element="tns:servicioFormatos" />
+  </wsdl:message>
+  <wsdl:message name="servicioFormatosSoapOut">
+    <wsdl:part name="parameters" element="tns:servicioFormatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDocument" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarSoapIn">
+    <wsdl:part name="parameters" element="tns:Guardar" />
+  </wsdl:message>
+  <wsdl:message name="GuardarSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="campos_Formato_Servicio_DataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:campos_Formato_Servicio_DataTable" />
+  </wsdl:message>
+  <wsdl:message name="campos_Formato_Servicio_DataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:campos_Formato_Servicio_DataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="guardarSolicitudIngresoTMPSoapIn">
+    <wsdl:part name="parameters" element="tns:guardarSolicitudIngresoTMP" />
+  </wsdl:message>
+  <wsdl:message name="guardarSolicitudIngresoTMPSoapOut">
+    <wsdl:part name="parameters" element="tns:guardarSolicitudIngresoTMPResponse" />
+  </wsdl:message>
+  <wsdl:message name="DatosTemporalesSoapIn">
+    <wsdl:part name="parameters" element="tns:DatosTemporales" />
+  </wsdl:message>
+  <wsdl:message name="DatosTemporalesSoapOut">
+    <wsdl:part name="parameters" element="tns:DatosTemporalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="tipoEnvioClienteServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:tipoEnvioClienteServicio" />
+  </wsdl:message>
+  <wsdl:message name="tipoEnvioClienteServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:tipoEnvioClienteServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="tiempoRespuestaClienteServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:tiempoRespuestaClienteServicio" />
+  </wsdl:message>
+  <wsdl:message name="tiempoRespuestaClienteServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:tiempoRespuestaClienteServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="formadeEnvioSoapIn">
+    <wsdl:part name="parameters" element="tns:formadeEnvio" />
+  </wsdl:message>
+  <wsdl:message name="formadeEnvioSoapOut">
+    <wsdl:part name="parameters" element="tns:formadeEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="tipodeSalidaSoapIn">
+    <wsdl:part name="parameters" element="tns:tipodeSalida" />
+  </wsdl:message>
+  <wsdl:message name="tipodeSalidaSoapOut">
+    <wsdl:part name="parameters" element="tns:tipodeSalidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarRegistroPorTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarRegistroPorTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="consultarRegistroPorTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarRegistroPorTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudRecuperacionJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:grabarSolicitudRecuperacionJSON" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudRecuperacionJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:grabarSolicitudRecuperacionJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCamposClaveSoapIn">
+    <wsdl:part name="parameters" element="tns:ServicioCamposClave" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCamposClaveSoapOut">
+    <wsdl:part name="parameters" element="tns:ServicioCamposClaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudesporClienteServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudesporClienteServicio" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudesporClienteServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudesporClienteServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="clienteServiciosHttpPostIn">
+    <wsdl:part name="idCliente" type="s:string" />
+    <wsdl:part name="usuarioTCS" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="clienteServiciosHttpPostOut" />
+  <wsdl:message name="DatosUsuarioHttpPostIn">
+    <wsdl:part name="idUsuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DatosUsuarioHttpPostOut" />
+  <wsdl:message name="camposFormatoServicioHttpPostIn">
+    <wsdl:part name="idFormato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="camposFormatoServicioHttpPostOut" />
+  <wsdl:message name="grabarSolicitudIngresoJSONHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+    <wsdl:part name="idFormato" type="s:string" />
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+    <wsdl:part name="detalleJson" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudIngresoJSONHttpPostOut" />
+  <wsdl:message name="servicioFormatosHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+    <wsdl:part name="tipoSolicitud" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="servicioFormatosHttpPostOut" />
+  <wsdl:message name="SaveDocumentHttpPostIn">
+    <wsdl:part name="docbinaryarray" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GuardarHttpPostIn" />
+  <wsdl:message name="GuardarHttpPostOut" />
+  <wsdl:message name="campos_Formato_Servicio_DataTableHttpPostIn">
+    <wsdl:part name="idFormato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="campos_Formato_Servicio_DataTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="guardarSolicitudIngresoTMPHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+    <wsdl:part name="idFormato" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+    <wsdl:part name="detalleJson" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="guardarSolicitudIngresoTMPHttpPostOut" />
+  <wsdl:message name="DatosTemporalesHttpPostIn">
+    <wsdl:part name="idFormato" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DatosTemporalesHttpPostOut" />
+  <wsdl:message name="tipoEnvioClienteServicioHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="tipoEnvioClienteServicioHttpPostOut" />
+  <wsdl:message name="tiempoRespuestaClienteServicioHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="tiempoRespuestaClienteServicioHttpPostOut" />
+  <wsdl:message name="formadeEnvioHttpPostIn" />
+  <wsdl:message name="formadeEnvioHttpPostOut" />
+  <wsdl:message name="tipodeSalidaHttpPostIn" />
+  <wsdl:message name="tipodeSalidaHttpPostOut" />
+  <wsdl:message name="consultarRegistroPorTipoDocumentoHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+    <wsdl:part name="idFormato" type="s:string" />
+    <wsdl:part name="detalleJson" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="consultarRegistroPorTipoDocumentoHttpPostOut" />
+  <wsdl:message name="grabarSolicitudRecuperacionJSONHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+    <wsdl:part name="idFormato" type="s:string" />
+    <wsdl:part name="idUsuario" type="s:string" />
+    <wsdl:part name="nombreUsuario" type="s:string" />
+    <wsdl:part name="observaciones" type="s:string" />
+    <wsdl:part name="tipoSolicitud" type="s:string" />
+    <wsdl:part name="tipoEnvio" type="s:string" />
+    <wsdl:part name="formaEnvio" type="s:string" />
+    <wsdl:part name="tipoSalida" type="s:string" />
+    <wsdl:part name="tiempoServicio" type="s:string" />
+    <wsdl:part name="detalleJson" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="grabarSolicitudRecuperacionJSONHttpPostOut" />
+  <wsdl:message name="ServicioCamposClaveHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCamposClaveHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudesporClienteServicioHttpPostIn">
+    <wsdl:part name="idServicio" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudesporClienteServicioHttpPostOut" />
+  <wsdl:portType name="capaservicioSoap">
+    <wsdl:operation name="clienteServicios">
+      <wsdl:input message="tns:clienteServiciosSoapIn" />
+      <wsdl:output message="tns:clienteServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <wsdl:input message="tns:DatosUsuarioSoapIn" />
+      <wsdl:output message="tns:DatosUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="camposFormatoServicio">
+      <wsdl:input message="tns:camposFormatoServicioSoapIn" />
+      <wsdl:output message="tns:camposFormatoServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoJSON">
+      <wsdl:input message="tns:grabarSolicitudIngresoJSONSoapIn" />
+      <wsdl:output message="tns:grabarSolicitudIngresoJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoDataSet">
+      <wsdl:input message="tns:grabarSolicitudIngresoDataSetSoapIn" />
+      <wsdl:output message="tns:grabarSolicitudIngresoDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="servicioFormatos">
+      <wsdl:input message="tns:servicioFormatosSoapIn" />
+      <wsdl:output message="tns:servicioFormatosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <wsdl:input message="tns:SaveDocumentSoapIn" />
+      <wsdl:output message="tns:SaveDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <wsdl:input message="tns:GuardarSoapIn" />
+      <wsdl:output message="tns:GuardarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="campos_Formato_Servicio_DataTable">
+      <wsdl:input message="tns:campos_Formato_Servicio_DataTableSoapIn" />
+      <wsdl:output message="tns:campos_Formato_Servicio_DataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarSolicitudIngresoTMP">
+      <wsdl:input message="tns:guardarSolicitudIngresoTMPSoapIn" />
+      <wsdl:output message="tns:guardarSolicitudIngresoTMPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosTemporales">
+      <wsdl:input message="tns:DatosTemporalesSoapIn" />
+      <wsdl:output message="tns:DatosTemporalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tipoEnvioClienteServicio">
+      <wsdl:input message="tns:tipoEnvioClienteServicioSoapIn" />
+      <wsdl:output message="tns:tipoEnvioClienteServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tiempoRespuestaClienteServicio">
+      <wsdl:input message="tns:tiempoRespuestaClienteServicioSoapIn" />
+      <wsdl:output message="tns:tiempoRespuestaClienteServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="formadeEnvio">
+      <wsdl:input message="tns:formadeEnvioSoapIn" />
+      <wsdl:output message="tns:formadeEnvioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodeSalida">
+      <wsdl:input message="tns:tipodeSalidaSoapIn" />
+      <wsdl:output message="tns:tipodeSalidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarRegistroPorTipoDocumento">
+      <wsdl:input message="tns:consultarRegistroPorTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:consultarRegistroPorTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudRecuperacionJSON">
+      <wsdl:input message="tns:grabarSolicitudRecuperacionJSONSoapIn" />
+      <wsdl:output message="tns:grabarSolicitudRecuperacionJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCamposClave">
+      <wsdl:input message="tns:ServicioCamposClaveSoapIn" />
+      <wsdl:output message="tns:ServicioCamposClaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudesporClienteServicio">
+      <wsdl:input message="tns:SolicitudesporClienteServicioSoapIn" />
+      <wsdl:output message="tns:SolicitudesporClienteServicioSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="capaservicioHttpPost">
+    <wsdl:operation name="clienteServicios">
+      <wsdl:input message="tns:clienteServiciosHttpPostIn" />
+      <wsdl:output message="tns:clienteServiciosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <wsdl:input message="tns:DatosUsuarioHttpPostIn" />
+      <wsdl:output message="tns:DatosUsuarioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="camposFormatoServicio">
+      <wsdl:input message="tns:camposFormatoServicioHttpPostIn" />
+      <wsdl:output message="tns:camposFormatoServicioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoJSON">
+      <wsdl:input message="tns:grabarSolicitudIngresoJSONHttpPostIn" />
+      <wsdl:output message="tns:grabarSolicitudIngresoJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="servicioFormatos">
+      <wsdl:input message="tns:servicioFormatosHttpPostIn" />
+      <wsdl:output message="tns:servicioFormatosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <wsdl:input message="tns:SaveDocumentHttpPostIn" />
+      <wsdl:output message="tns:SaveDocumentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <wsdl:input message="tns:GuardarHttpPostIn" />
+      <wsdl:output message="tns:GuardarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="campos_Formato_Servicio_DataTable">
+      <wsdl:input message="tns:campos_Formato_Servicio_DataTableHttpPostIn" />
+      <wsdl:output message="tns:campos_Formato_Servicio_DataTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarSolicitudIngresoTMP">
+      <wsdl:input message="tns:guardarSolicitudIngresoTMPHttpPostIn" />
+      <wsdl:output message="tns:guardarSolicitudIngresoTMPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosTemporales">
+      <wsdl:input message="tns:DatosTemporalesHttpPostIn" />
+      <wsdl:output message="tns:DatosTemporalesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tipoEnvioClienteServicio">
+      <wsdl:input message="tns:tipoEnvioClienteServicioHttpPostIn" />
+      <wsdl:output message="tns:tipoEnvioClienteServicioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tiempoRespuestaClienteServicio">
+      <wsdl:input message="tns:tiempoRespuestaClienteServicioHttpPostIn" />
+      <wsdl:output message="tns:tiempoRespuestaClienteServicioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="formadeEnvio">
+      <wsdl:input message="tns:formadeEnvioHttpPostIn" />
+      <wsdl:output message="tns:formadeEnvioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tipodeSalida">
+      <wsdl:input message="tns:tipodeSalidaHttpPostIn" />
+      <wsdl:output message="tns:tipodeSalidaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarRegistroPorTipoDocumento">
+      <wsdl:input message="tns:consultarRegistroPorTipoDocumentoHttpPostIn" />
+      <wsdl:output message="tns:consultarRegistroPorTipoDocumentoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudRecuperacionJSON">
+      <wsdl:input message="tns:grabarSolicitudRecuperacionJSONHttpPostIn" />
+      <wsdl:output message="tns:grabarSolicitudRecuperacionJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCamposClave">
+      <wsdl:input message="tns:ServicioCamposClaveHttpPostIn" />
+      <wsdl:output message="tns:ServicioCamposClaveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudesporClienteServicio">
+      <wsdl:input message="tns:SolicitudesporClienteServicioHttpPostIn" />
+      <wsdl:output message="tns:SolicitudesporClienteServicioHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="capaservicioSoap" type="tns:capaservicioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="clienteServicios">
+      <soap:operation soapAction="http://tempuri.org/clienteServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <soap:operation soapAction="http://tempuri.org/DatosUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="camposFormatoServicio">
+      <soap:operation soapAction="http://tempuri.org/camposFormatoServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoJSON">
+      <soap:operation soapAction="http://tempuri.org/grabarSolicitudIngresoJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoDataSet">
+      <soap:operation soapAction="http://tempuri.org/grabarSolicitudIngresoDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="servicioFormatos">
+      <soap:operation soapAction="http://tempuri.org/servicioFormatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <soap:operation soapAction="http://tempuri.org/Guardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="campos_Formato_Servicio_DataTable">
+      <soap:operation soapAction="http://tempuri.org/campos_Formato_Servicio_DataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarSolicitudIngresoTMP">
+      <soap:operation soapAction="http://tempuri.org/guardarSolicitudIngresoTMP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosTemporales">
+      <soap:operation soapAction="http://tempuri.org/DatosTemporales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipoEnvioClienteServicio">
+      <soap:operation soapAction="http://tempuri.org/tipoEnvioClienteServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tiempoRespuestaClienteServicio">
+      <soap:operation soapAction="http://tempuri.org/tiempoRespuestaClienteServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="formadeEnvio">
+      <soap:operation soapAction="http://tempuri.org/formadeEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodeSalida">
+      <soap:operation soapAction="http://tempuri.org/tipodeSalida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarRegistroPorTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/consultarRegistroPorTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudRecuperacionJSON">
+      <soap:operation soapAction="http://tempuri.org/grabarSolicitudRecuperacionJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCamposClave">
+      <soap:operation soapAction="http://tempuri.org/ServicioCamposClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudesporClienteServicio">
+      <soap:operation soapAction="http://tempuri.org/SolicitudesporClienteServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="capaservicioSoap12" type="tns:capaservicioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="clienteServicios">
+      <soap12:operation soapAction="http://tempuri.org/clienteServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <soap12:operation soapAction="http://tempuri.org/DatosUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="camposFormatoServicio">
+      <soap12:operation soapAction="http://tempuri.org/camposFormatoServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoJSON">
+      <soap12:operation soapAction="http://tempuri.org/grabarSolicitudIngresoJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoDataSet">
+      <soap12:operation soapAction="http://tempuri.org/grabarSolicitudIngresoDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="servicioFormatos">
+      <soap12:operation soapAction="http://tempuri.org/servicioFormatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap12:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <soap12:operation soapAction="http://tempuri.org/Guardar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="campos_Formato_Servicio_DataTable">
+      <soap12:operation soapAction="http://tempuri.org/campos_Formato_Servicio_DataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarSolicitudIngresoTMP">
+      <soap12:operation soapAction="http://tempuri.org/guardarSolicitudIngresoTMP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosTemporales">
+      <soap12:operation soapAction="http://tempuri.org/DatosTemporales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipoEnvioClienteServicio">
+      <soap12:operation soapAction="http://tempuri.org/tipoEnvioClienteServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tiempoRespuestaClienteServicio">
+      <soap12:operation soapAction="http://tempuri.org/tiempoRespuestaClienteServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="formadeEnvio">
+      <soap12:operation soapAction="http://tempuri.org/formadeEnvio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tipodeSalida">
+      <soap12:operation soapAction="http://tempuri.org/tipodeSalida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarRegistroPorTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/consultarRegistroPorTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudRecuperacionJSON">
+      <soap12:operation soapAction="http://tempuri.org/grabarSolicitudRecuperacionJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCamposClave">
+      <soap12:operation soapAction="http://tempuri.org/ServicioCamposClave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudesporClienteServicio">
+      <soap12:operation soapAction="http://tempuri.org/SolicitudesporClienteServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="capaservicioHttpPost" type="tns:capaservicioHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="clienteServicios">
+      <http:operation location="/clienteServicios" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DatosUsuario">
+      <http:operation location="/DatosUsuario" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="camposFormatoServicio">
+      <http:operation location="/camposFormatoServicio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudIngresoJSON">
+      <http:operation location="/grabarSolicitudIngresoJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="servicioFormatos">
+      <http:operation location="/servicioFormatos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <http:operation location="/SaveDocument" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <http:operation location="/Guardar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="campos_Formato_Servicio_DataTable">
+      <http:operation location="/campos_Formato_Servicio_DataTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarSolicitudIngresoTMP">
+      <http:operation location="/guardarSolicitudIngresoTMP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DatosTemporales">
+      <http:operation location="/DatosTemporales" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="tipoEnvioClienteServicio">
+      <http:operation location="/tipoEnvioClienteServicio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="tiempoRespuestaClienteServicio">
+      <http:operation location="/tiempoRespuestaClienteServicio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="formadeEnvio">
+      <http:operation location="/formadeEnvio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="tipodeSalida">
+      <http:operation location="/tipodeSalida" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="consultarRegistroPorTipoDocumento">
+      <http:operation location="/consultarRegistroPorTipoDocumento" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="grabarSolicitudRecuperacionJSON">
+      <http:operation location="/grabarSolicitudRecuperacionJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCamposClave">
+      <http:operation location="/ServicioCamposClave" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudesporClienteServicio">
+      <http:operation location="/SolicitudesporClienteServicio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="capaservicio">
+    <wsdl:port name="capaservicioSoap" binding="tns:capaservicioSoap">
+      <soap:address location="http://localhost:8081/capaservicio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="capaservicioSoap12" binding="tns:capaservicioSoap12">
+      <soap12:address location="http://localhost:8081/capaservicio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="capaservicioHttpPost" binding="tns:capaservicioHttpPost">
+      <http:address location="http://localhost:8081/capaservicio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

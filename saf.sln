@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "safsite(1)", "safsite\", "{E17D6426-6524-4148-86BB-5C7A53FE8782}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52367"
+		Debug.AspNetCompiler.PhysicalPath = "safsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52367\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52367"
+		Release.AspNetCompiler.PhysicalPath = "safsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52367\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52367"
+		SlnRelativePath = "safsite\"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{8F3AAD24-2276-4B4F-8104-F5C9070D544F} = {8F3AAD24-2276-4B4F-8104-F5C9070D544F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "safservicio", "safservicio\safservicio.csproj", "{8F3AAD24-2276-4B4F-8104-F5C9070D544F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E17D6426-6524-4148-86BB-5C7A53FE8782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17D6426-6524-4148-86BB-5C7A53FE8782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17D6426-6524-4148-86BB-5C7A53FE8782}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17D6426-6524-4148-86BB-5C7A53FE8782}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8F3AAD24-2276-4B4F-8104-F5C9070D544F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3AAD24-2276-4B4F-8104-F5C9070D544F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3AAD24-2276-4B4F-8104-F5C9070D544F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3AAD24-2276-4B4F-8104-F5C9070D544F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

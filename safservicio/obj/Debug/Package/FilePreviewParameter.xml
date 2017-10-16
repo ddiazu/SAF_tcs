@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="200.27.154.214:8080/safservicio" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Desarrollo-Pc\\TCS\\saf\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Desarrollo-Pc\\TCS\\saf\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Dbconnection-Web.config Connection String" description="" value="Server=localhost; &#xD;&#xA;         Database=saf_nueva ; Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Desarrollo-Pc\\TCS\\saf\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Dbconnection']/@connectionString" />
+  </parameter>
+</parameters>

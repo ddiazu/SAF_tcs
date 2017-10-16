@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="saf.views.capaservicio">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="saf.views.capaservicio.servicio" Collapsed="true">
+        <Compartments>
+          <Compartment Name="Fields" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>capaservicio.asmx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="saf.views.capaservicio.formato" Collapsed="true">
+        <Compartments>
+          <Compartment Name="Fields" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>capaservicio.asmx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="saf.views.capaservicio.MensajeRetorno" Collapsed="true">
+        <Compartments>
+          <Compartment Name="Fields" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>capaservicio.asmx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="saf.views.capaservicio.usuario" Collapsed="true">
+        <Compartments>
+          <Compartment Name="Fields" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>capaservicio.asmx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="saf.views.capaservicio.campoServicio" Collapsed="true">
+        <Compartments>
+          <Compartment Name="Fields" Collapsed="true" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>capaservicio.asmx.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAQAAAIASAQAQQMAAIAAABAAAAAAACAAAAABAAAEAA=</HashCode>
+      <FileName>capaservicio.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

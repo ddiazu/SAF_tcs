@@ -1,0 +1,16 @@
+C:\Desarrollo-Pc\TCS\saf\bin\saf.dll.config
+C:\Desarrollo-Pc\TCS\saf\bin\saf.dll
+C:\Desarrollo-Pc\TCS\saf\bin\saf.pdb
+C:\Desarrollo-Pc\TCS\saf\bin\Newtonsoft.Json.dll
+C:\Desarrollo-Pc\TCS\saf\bin\Newtonsoft.Json.xml
+C:\Desarrollo-Pc\TCS\saf\obj\Release\safservicio.csprojResolveAssemblyReference.cache
+C:\Desarrollo-Pc\TCS\saf\obj\Release\saf.dll
+C:\Desarrollo-Pc\TCS\saf\obj\Release\saf.pdb
+C:\Desarrollo-Pc\TCS\saf\safservicio\bin\saf.dll.config
+C:\Desarrollo-Pc\TCS\saf\safservicio\bin\saf.dll
+C:\Desarrollo-Pc\TCS\saf\safservicio\bin\saf.pdb
+C:\Desarrollo-Pc\TCS\saf\safservicio\bin\Newtonsoft.Json.dll
+C:\Desarrollo-Pc\TCS\saf\safservicio\bin\Newtonsoft.Json.xml
+C:\Desarrollo-Pc\TCS\saf\safservicio\obj\Release\safservicio.csprojResolveAssemblyReference.cache
+C:\Desarrollo-Pc\TCS\saf\safservicio\obj\Release\saf.dll
+C:\Desarrollo-Pc\TCS\saf\safservicio\obj\Release\saf.pdb

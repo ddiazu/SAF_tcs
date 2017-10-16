@@ -1,0 +1,6 @@
+C:\Desarrollo-Pc\TCS\saf\bin\saf.dll.config
+C:\Desarrollo-Pc\TCS\saf\bin\saf.dll
+C:\Desarrollo-Pc\TCS\saf\bin\saf.pdb
+C:\Desarrollo-Pc\TCS\saf\obj\Debug\saf.dll
+C:\Desarrollo-Pc\TCS\saf\obj\Debug\saf.pdb
+C:\Desarrollo-Pc\TCS\saf\obj\Debug\saf.csprojResolveAssemblyReference.cache
