@@ -446,7 +446,8 @@ public partial class cargarRecuperacionDocumentos : System.Web.UI.Page
 
         string cadena = "spInsCabaceraSolicitudRecuperacionDocumentos @idServicio=" + tIdServicio.Text + ", @idFormato=" + tIdFormato.Text + ", @idUsuario=" + idUsuario.ToString()
             + ", @observaciones='', @tipoSolicitud=1, @tipoEnvio=" + cmbTipoEnvio.SelectedValue.ToString() + ", @formaEnvio=" + cmbFormaEnvio.SelectedValue.ToString()
-            + ", @tipoSalida=" + cmbTipoSalida.SelectedValue.ToString() + ", @tiempoServicio=" + cmbTiempoServicio.SelectedValue.ToString() + ";";
+            + ", @tipoSalida=" + cmbTipoSalida.SelectedValue.ToString() + ", @tiempoServicio=" + cmbTiempoServicio.SelectedValue.ToString() 
+            + ", @nombreUsuario='" + tNombreUsuario.Text+"';";
 
 
         SqlConnection cn = new SqlConnection();

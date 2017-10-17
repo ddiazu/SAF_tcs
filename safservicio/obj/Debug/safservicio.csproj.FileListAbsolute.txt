@@ -21,3 +21,10 @@ H:\Desarrollo\Personal\tcs\saf\safservicio\bin\Newtonsoft.Json.xml
 H:\Desarrollo\Personal\tcs\saf\safservicio\obj\Debug\safservicio.csprojResolveAssemblyReference.cache
 H:\Desarrollo\Personal\tcs\saf\safservicio\obj\Debug\saf.dll
 H:\Desarrollo\Personal\tcs\saf\safservicio\obj\Debug\saf.pdb
+C:\Users\Desarrollo\Source\Repos\SAF_tcs\safservicio\bin\saf.dll.config
+C:\Users\Desarrollo\Source\Repos\SAF_tcs\safservicio\bin\saf.dll
+C:\Users\Desarrollo\Source\Repos\SAF_tcs\safservicio\bin\saf.pdb
+C:\Users\Desarrollo\Source\Repos\SAF_tcs\safservicio\bin\Newtonsoft.Json.dll
+C:\Users\Desarrollo\Source\Repos\SAF_tcs\safservicio\bin\Newtonsoft.Json.xml
+C:\Users\Desarrollo\Source\Repos\SAF_tcs\safservicio\obj\Debug\saf.dll
+C:\Users\Desarrollo\Source\Repos\SAF_tcs\safservicio\obj\Debug\saf.pdb

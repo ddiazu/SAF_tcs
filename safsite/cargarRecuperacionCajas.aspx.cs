@@ -70,7 +70,7 @@ public partial class cargarRecuperacionCajas : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
          tIdServicio.Text = Request.QueryString["idservicio"];
-        // tNombreUsuario.Text = Request.QueryString["usuario"];
+         tNombreUsuario.Text = Request.QueryString["usuario"];
          idUsuario = Request.QueryString["idUsuario"];
 
         Mensaje.Text = "";
@@ -234,7 +234,6 @@ public partial class cargarRecuperacionCajas : System.Web.UI.Page
         string cadena = "spDelRecuperaCajasTemporal @idcliente=" + idServicio.ToString()+", @idusuario="+idUsuario.ToString()+";";
         cm.CommandText = cadena;
         cm.ExecuteNonQuery();
-
         for (int r = 0; r <= Dt.Rows.Count - 1; r++)
         {
             cadena = "spInsTempRecuperaCaja @idCliente=" +
@@ -243,8 +242,8 @@ public partial class cargarRecuperacionCajas : System.Web.UI.Page
             cm.ExecuteNonQuery();
 
         }
-        cm.CommandText = "spGetVerificarCajasSolicitadas @idCliente=" + idServicio.ToString()+ ", @idUsuario=" + idUsuario.ToString() ;
 
+        cm.CommandText = "spGetVerificarCajasSolicitadas @idCliente=" + idServicio.ToString()+ ", @idUsuario=" + idUsuario.ToString();
         SqlDataReader Dr = cm.ExecuteReader();
         List<Caja> lista = new List<Caja>();
         while (Dr.Read()){
@@ -376,7 +375,8 @@ public partial class cargarRecuperacionCajas : System.Web.UI.Page
 
         string cadena = "spInsCabaceraSolicitudRecuperacionCajas @idServicio=" + tIdServicio.Text + ", @idUsuario=" + idUsuario.ToString()
             + ", @observaciones='', @tipoSolicitud=2, @tipoEnvio=" + cmbTipoEnvio.SelectedValue.ToString() + ", @formaEnvio=" + cmbFormaEnvio.SelectedValue.ToString()
-            + ", @tipoSalida=" + cmbTipoSalida.SelectedValue.ToString() + ", @tiempoServicio=" + cmbTiempoServicio.SelectedValue.ToString() + ";";
+            + ", @tipoSalida=" + cmbTipoSalida.SelectedValue.ToString() + ", @tiempoServicio=" + cmbTiempoServicio.SelectedValue.ToString() + 
+            ", @nombreUsuario='"+ tNombreUsuario.Text + "';";
 
 
         SqlConnection cn = new SqlConnection();
