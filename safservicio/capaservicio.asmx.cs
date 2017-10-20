@@ -1380,6 +1380,19 @@ namespace saf.views
         }
 
         [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public void delRegistroRecuperacionDocumento_TMP(long idRegistro)
+        {
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
+            cn.Open();
+            SqlCommand cm = new SqlCommand();
+            cm.Connection = cn;
+            cm.CommandText = "spdelRegistroRecuperacionDocumento_TMP @idRegistro=" + idRegistro.ToString();
+            cm.ExecuteNonQuery();
+            cn.Close();
+        }
+        [WebMethod]
         public void consultacsv()
         {
             DataSet Ds = new DataSet();

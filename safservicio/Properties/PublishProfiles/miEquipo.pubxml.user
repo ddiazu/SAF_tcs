@@ -13,7 +13,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>10/16/2017 19:27:17</publishTime>
     </File>
     <File Include="bin/saf.dll">
-      <publishTime>10/17/2017 11:33:52</publishTime>
+      <publishTime>10/20/2017 13:02:03</publishTime>
     </File>
     <File Include="capaservicio.asmx">
       <publishTime>10/16/2017 19:27:15</publishTime>
